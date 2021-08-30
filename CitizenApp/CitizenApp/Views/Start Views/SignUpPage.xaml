@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CitizenApp.SignUpPage" Background="#FFF">
+    <ContentPage.Content BackgroundColor="#FFF">
+
+        <ScrollView>
+        
+            
+        <StackLayout Padding="5">
+
+                <Image Margin="5" Source="citizen_app.png" />
+                <StackLayout x:Name="layoutRegister" IsVisible="true" BackgroundColor="white">
+      
+
+                <Label TextColor="#333" Margin="2" Text="Name" />
+                <Entry TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" x:Name="txtName" Placeholder="Name" />
+
+                <Label TextColor="#333" Margin="2" Text="Lastname" />
+                <Entry TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" x:Name="txtLastname" Placeholder="Last Name" />
+
+                <Label TextColor="#333" Margin="2" Text="Contact Number" />
+                <Entry TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" x:Name="txtContactNumber" Placeholder="Contact Number" MaxLength="13"/>
+
+                <Label TextColor="#333" Margin="2" Text="Organization Name (optional)" />
+                <Entry TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" x:Name="txtOrgName" Placeholder="Organization" MaxLength="200" />
+
+                <Label TextColor="#333" Margin="2" Text="User Name" />
+                <Entry TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" x:Name="txtUsername" Placeholder="User Name" />
+
+                <Label TextColor="#333" Margin="2"  Text="Password" />
+                <Entry TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" ReturnType="Go" x:Name="txtPassword" Placeholder="Password" IsPassword="True"/>
+
+                <Button Margin="2" TextColor="White" Background="#0000A2"  x:Name="btnRegister" Text="Sign Up" />
+                
+
+
+                <Label Margin="2" FontSize="Medium" HorizontalTextAlignment="Center" TextColor="Blue" x:Name="btnLogin" Text="Sign In" />
+
+
+
+            </StackLayout>
+
+
+            <StackLayout x:Name="layoutLoading" IsVisible="false" BackgroundColor="white">
+
+
+                <Label TextColor="#333" Text="Signing Up" HorizontalTextAlignment="Center" 
+                       VerticalOptions="Center" FontAttributes="Bold" FontSize="Large"/>
+                <ActivityIndicator VerticalOptions="CenterAndExpand" x:Name="progLoading" IsRunning="True" Color="Green"/>
+            </StackLayout>
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

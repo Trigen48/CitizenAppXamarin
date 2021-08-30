@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+              xmlns:zxcm="clr-namespace:ZXing.Common;assembly=zxing.portable"
+             x:Class="CitizenApp.GenerateQRPage" BackgroundColor="#FFF"
+             Title="Generate QR CODE">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label TextColor="#333" FontSize="Large" HorizontalTextAlignment="Center" Padding="10" FontAttributes="Bold" Text="Share QR Code"/>
+            <zxing:ZXingBarcodeImageView x:Name="barcodeView" WidthRequest="300" HeightRequest="300" BarcodeValue="" BarcodeFormat="QR_CODE">
+                <zxing:ZXingBarcodeImageView.BarcodeOptions>
+                    <zxcm:EncodingOptions Width="300" Height="300" />
+                </zxing:ZXingBarcodeImageView.BarcodeOptions>
+            </zxing:ZXingBarcodeImageView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

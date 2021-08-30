@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+             xmlns:local="clr-namespace:CitizenApp"  
+             x:Class="CitizenApp.ContactMainDetail"
+             x:Name="ContactMainDetailPage"
+            Title="Contacts" BackgroundColor="White">
+    
+    <StackLayout>
+        <ListView x:Name="ContactListView" ItemsSource="{Binding Source={x:Reference ContactMainDetailPage}, Path=BindingContext.MyList}" IsVisible="True">
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Sync Contacts" Clicked="Button_Clicked"></Button>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Delete Item" Clicked="cntMenu_Delete" CommandParameter="{Binding .}">
+                            </MenuItem>
+                        </ViewCell.ContextActions>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{Binding Image}" HeightRequest="50" WidthRequest="50"></Image>
+                            <Label FontSize="Large" Text="{Binding Fullname}" FontAttributes="Bold" TextColor="#333"></Label>
+                        </StackLayout>
+                    </ViewCell>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <StackLayout x:Name="layoutLoading" IsVisible="false">
+            <Label TextColor="#333" Text="Loading Contacts" HorizontalTextAlignment="Center" 
+                       VerticalOptions="Center" FontAttributes="Bold" FontSize="Large"/>
+            <ActivityIndicator VerticalOptions="CenterAndExpand" x:Name="progLoading" IsRunning="True" Color="Green"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

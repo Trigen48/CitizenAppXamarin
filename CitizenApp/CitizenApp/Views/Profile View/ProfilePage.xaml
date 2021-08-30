@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CitizenApp.ProfilePage"
+             Title="Profile View" Background="#FFF">
+    <ContentPage.Content>
+        <ScrollView Padding="10">
+        <StackLayout Padding="5" >
+
+
+            <StackLayout x:Name="layoutProfile" IsVisible="true" BackgroundColor="white" >
+
+
+                <Label TextColor="#333"  Text="Profile" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium" x:Name="lblTitle"/>
+
+                <Label TextColor="#333" Margin="2" Text="Name" />
+                <Entry IsReadOnly="True" TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" x:Name="txtName" Placeholder="Name" />
+
+                <Label TextColor="#333" Margin="2" Text="Lastname" />
+                <Entry IsReadOnly="True" TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" x:Name="txtLastname" Placeholder="Last Name" />
+
+                <Label TextColor="#333" Margin="2" Text="Contact Number" />
+                <Entry IsReadOnly="True" TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" x:Name="txtContactNumber" Placeholder="Contact Number" MaxLength="13"/>
+
+                <Label TextColor="#333" Margin="2" Text="Contact Number Work" />
+                <Entry IsReadOnly="True" TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" x:Name="txtContactNumberWork" Placeholder="Contact Number work" MaxLength="13"/>
+
+                <Label TextColor="#333" Margin="2" Text="Email Address" />
+                    <Entry IsReadOnly="True" TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" x:Name="txtEmailaddress" Placeholder="Email Address" MaxLength="128"/>
+
+                <Label TextColor="#333" Margin="2" Text="Organization Name (optional)" />
+                    <Entry IsReadOnly="True" TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" x:Name="txtOrgName" Placeholder="Organization" MaxLength="200" />
+
+
+                    <Label TextColor="#333" Margin="2" Text="WhatsApp" />
+                <Entry IsReadOnly="True" TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" x:Name="txtWhatsappNo" Placeholder="Whatsapp" MaxLength="13"/>
+
+                <Label TextColor="#333" Margin="2" Text="LinkedIn Handle" />
+                <Entry IsReadOnly="True" TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" x:Name="txtLinkedIn" Placeholder="LinkedIn" MaxLength="200"/>
+
+
+                <Label TextColor="#333" Margin="2" Text="Instagram Handle" />
+                <Entry IsReadOnly="True" TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" x:Name="txtInstagram" Placeholder="Instagram" MaxLength="200"/>
+
+
+                <Label TextColor="#333" Margin="2" Text="Twitter Handle" />
+                <Entry IsReadOnly="True" TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" x:Name="txtTwitter" Placeholder="Twitter" MaxLength="200"/>
+
+
+                <Button Margin="2" TextColor="White" Background="#0000A2"  x:Name="btnUpdate" Text="Update" IsVisible="false"/>
+     
+
+
+            </StackLayout>
+
+
+            <StackLayout x:Name="layoutLoading" IsVisible="false" BackgroundColor="white">
+
+
+                <Label TextColor="#333" Text="Updating Profile" HorizontalTextAlignment="Center" 
+                       VerticalOptions="Center" FontAttributes="Bold" FontSize="Large"/>
+                <ActivityIndicator VerticalOptions="CenterAndExpand" x:Name="progLoading" IsRunning="True" Color="Green"/>
+            </StackLayout>
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CitizenApp.SignInPage" Background="white">
+    <ContentPage.Content>
+
+        <ScrollView>
+        <StackLayout Padding="5" >
+
+            <Image Margin="5" Source="citizen_app.png" />
+            <StackLayout x:Name="layoutLogin" IsVisible="true" BackgroundColor="white">
+          
+           
+                <Label TextColor="#333" Margin="2" Text="User Name" />
+                <Entry TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" x:Name="txtUsername" Placeholder="User Name" />
+
+                <Label TextColor="#333" Margin="2"  Text="Password" />
+                <Entry TextColor="#333" Margin="2" BackgroundColor="WhiteSmoke" ReturnType="Go" x:Name="txtPassword" Placeholder="Password" IsPassword="True"/>
+
+                <Button Margin="2"  FontAttributes="Bold" TextColor="White" Background="#0000A2"  x:Name="btnLogin" Text="Sign In" />
+
+
+                <Label Margin="2" FontSize="Medium" HorizontalTextAlignment="Center" TextColor="Blue" x:Name="btnRegister" Text="If not registered, Sign Up" />
+                
+            </StackLayout>
+
+
+            <StackLayout x:Name="layoutLoading" IsVisible="false" BackgroundColor="white">
+
+
+                <Label TextColor="#333" Text="Signing in" HorizontalTextAlignment="Center" 
+                       VerticalOptions="Center" FontAttributes="Bold" FontSize="Large"/>
+                <ActivityIndicator VerticalOptions="CenterAndExpand" x:Name="progLoading" IsRunning="True" Color="Green"/>
+            </StackLayout>
+
+        </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CitizenApp.ContactAddPage"
+             Title="Add new contact">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="txtWait" FontSize="Large" HorizontalTextAlignment="Center" FontAttributes="Bold" Text="Please wait"/>
+            
+            <ActivityIndicator x:Name="progLoading" IsRunning="True" Color="Brown"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
